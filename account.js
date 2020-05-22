@@ -5,6 +5,11 @@ const UIprofit = document.querySelector('.profit'),
       UIexpensesInput = document.querySelector('#expenses_input'),
       UIcalculate = document.querySelector('.calculate-btn');
       
+      //sets today's date
+      let today = new Date();
+      document.getElementById('time').innerText = `${today}`;
+
+      
       //listen for submit event 
       const eventListener = () =>{
         UIcalculate.addEventListener('click', function() {
@@ -47,7 +52,7 @@ const UIprofit = document.querySelector('.profit'),
        
        //validate input
        if(isNaN(salesInput) || isNaN(expensesInput)){
-         showError('Please input your figures');
+         showError('Please fill all fields with your figures');
          document.querySelector('#loading').classList.add('hide');
           
        }else{

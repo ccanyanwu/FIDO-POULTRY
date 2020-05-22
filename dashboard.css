@@ -18,7 +18,7 @@ body {
 }
 .sidebar header {
   font-size: 22px;
-  color: white;
+  color: white!important ;
   line-height: 70px;
   padding-left: 40px;
   background: #006600;
@@ -30,7 +30,7 @@ body {
   width: 100%;
   line-height: 65px;
   font-size: 20px;
-  color: white;
+  color: white!important ;
   padding-left: 40px;
   box-sizing: border-box;
   border-bottom: 1px solid #fff;
@@ -56,7 +56,7 @@ label #btn{
   left: 5px;
   top: 5px;
   font-size: 25px;
-  color: white;
+  color: white!important ;
   padding: 6px 12px;
   transition: all .5s;
 }
@@ -65,7 +65,7 @@ label #cancel{
   left: -195px;
   top: 17px;
   font-size: 30px;
-  color: #fff;
+  color: #fff!important ;
   padding: 4px 9px;
   transition: all .5s ease;
 }
@@ -88,6 +88,7 @@ section{
   transition: all .5s;
   text-align: center ;
   padding: 2rem;
+  color:#00661a!important ;
 }
 article.dashboard{
   display: grid;

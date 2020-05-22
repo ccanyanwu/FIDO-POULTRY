@@ -9,6 +9,7 @@
 }
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: #00661a ;
 }
 .hide{
     display: none;
@@ -18,7 +19,7 @@ body {
   width:16rem;
   height: 1rem;
   background: #f07d7f;
-  color: #000 ;
+  color: #000!important ;
   border-radius :0.5rem;
   text-align: center;
   padding: 0.5rem 0;
@@ -34,7 +35,7 @@ body {
 }
 .sidebar header {
   font-size: 22px;
-  color: white;
+  color: white!important ;
   line-height: 70px;
   padding-left: 40px;
   background: #006600;
@@ -46,7 +47,7 @@ body {
   width: 100%;
   line-height: 65px;
   font-size: 20px;
-  color: white;
+  color: white!important ;
   padding-left: 40px;
   box-sizing: border-box;
   border-bottom: 1px solid #fff;
@@ -72,7 +73,7 @@ label #btn{
   left: 5px;
   top: 5px;
   font-size: 25px;
-  color: white;
+  color: white!important ;
   padding: 6px 12px;
   transition: all .5s;
 }
@@ -81,7 +82,7 @@ label #cancel{
   left: -195px;
   top: 17px;
   font-size: 30px;
-  color: #fff;
+  color: #fff!important ;
   padding: 4px 9px;
   transition: all .5s ease;
 }
@@ -163,6 +164,8 @@ label{
     display: flex;
     width: 100%;
     margin: 1rem 0;
+    border-radius: 0.5rem ;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20) inset;
 }
 
 span.account_sales_icon,
@@ -196,11 +199,20 @@ span.account_expenses_icon{
     text-align: center;
     font-size: larger;
 }
+#sales_input{
+    color: #00661a ;
+}
 #sales_input:focus{
     border: 2px solid #00661a;
+    color: #00661a ;
+}
+
+#expenses_input{
+    color: #e01e14;
 }
 #expenses_input:focus{
     border: 2px solid #e01e14;
+    color: #e01e14;
 }
 #calculate{
     margin-top: 4rem;
@@ -217,6 +229,8 @@ input[type="button"]{
     outline: none;
     cursor: pointer;
     border: none ;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+   
 }
 
 /**********MEDIA QUERIES**********/
