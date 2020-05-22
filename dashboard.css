@@ -1,0 +1,164 @@
+@import url();
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  min-height: 100%;
+  background: #00661a;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  padding-left: 40px;
+  background: #006600;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #006600;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 5px;
+  top: 5px;
+  font-size: 25px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #fff;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+section{
+  min-height: 100%;
+  transition: all .5s;
+  text-align: center ;
+  padding: 2rem;
+}
+article.dashboard{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center ;
+  align-content: center ;
+  grid-gap :2rem ;
+  margin-top:3.2rem ;
+}
+h1.dashboard_heading{
+  font-size :240%;
+  text-align: center ;
+  min-width: 100%;
+}
+div.dashboard_card{
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    box-sizing: border-box;
+    width: 16rem;
+    height :16rem;
+    display: grid;
+    grid-template-rows: 10fr 2fr;
+    padding: 1rem;
+} 
+
+h2.dashboard_card_header{
+  text-align: left;
+  font-size :190%;
+  font-weight :300;
+  border-bottom:1px solid #c4c4c4;
+}
+h2 i{
+  display: block ;
+  margin: 1.5rem auto ;
+} 
+p.dashboard_card_figure{
+  text-align: right ;
+  font-size :150%;
+}
+p.bird_count{
+  color: #147ae0;
+} 
+p.mortality_rate,
+p.expenditure,
+p.loss{
+  color: #e01e14;
+}
+p.feeds,
+p.sales,
+p.profit{
+  color:#238510;
+}
+p.drugs{
+  color: #e3d912;
+}
+
+
+/**********MEDIA QUERIES**********/
+@media all and (min-width:560px){
+  article.dashboard{
+  display: grid;
+  grid-template-columns:  1fr  1fr;
+  grid-gap :2rem ;
+  justify-content: space-around;
+  }
+  
+  div.dashboard_card{
+    width:19rem;
+    height:auto ;
+  }
+  h2 i{
+    margin: 3rem auto;
+    font-size: 200%;
+  } 
+}
