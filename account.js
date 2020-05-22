@@ -70,7 +70,8 @@ const UIprofit = document.querySelector('.profit'),
          }document.querySelector('#loading').classList.add('hide');
          
        }
-       
+       UIsalesInput.value = '';
+       UIexpensesInput.value = '';
      };
      
      //call eventListener
