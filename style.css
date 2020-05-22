@@ -16,12 +16,12 @@ body {
 
 .error{
   width:16rem;
-  height: rem;
+  height: 1rem;
   background: #f07d7f;
   color: #000 ;
   border-radius :0.5rem;
   text-align: center;
-  padding: auto;
+  padding: 0.5rem 0;
   margin: 0 auto ;
 }
 .sidebar {
