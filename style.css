@@ -1,0 +1,244 @@
+@import url();
+
+*{
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.hide{
+    display: none;
+}
+
+.error{
+  width:16rem;
+  height: rem;
+  background: #f07d7f;
+  color: #000 ;
+  border-radius :0.5rem;
+  text-align: center;
+  padding: auto;
+  margin: 0 auto ;
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  min-height: 100%;
+  background: #00661a;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  padding-left: 40px;
+  background: #006600;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #006600;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 5px;
+  top: 5px;
+  font-size: 25px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #fff;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+section{
+  min-height: 100%;
+  transition: all .5s;
+  text-align: center ;
+  padding: 2rem;
+}
+article.account{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center ;
+  align-content: center ;
+  grid-gap :2rem ;
+  margin-top:3.2rem ;
+}
+h1.account_heading{
+  font-size :240%;
+  text-align: center ;
+  min-width: 100%;
+}
+div.account_card{
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    box-sizing: border-box;
+    border-radius: 1rem;
+    width: 16rem;
+    height :8rem;
+    display: grid;
+    grid-template-rows: 10fr 2fr;
+    padding: 1rem;
+} 
+
+h2.account_card_header{
+  text-align: left;
+  font-size :190%;
+  font-weight :300;
+
+}
+
+p.account_card_figure{
+  text-align: right ;
+  font-size :150%;
+}
+p.profit{
+  color: #00661a;
+} 
+p.loss{
+  color: #e01e14;
+}
+
+div.account_sales,
+div.account_expenses{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 16rem;
+}
+label{
+    font-size: 200%;
+}
+.account_sales_input-group,
+.account_expenses_input-group{
+    display: flex;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+span.account_sales_icon,
+span.account_expenses_icon{
+    padding: 0.625rem;
+    
+    color: #fff;
+    min-width: 2rem;
+    text-align: center;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    
+    
+}
+span.account_sales_icon{
+    background: #00661a;
+}
+span.account_expenses_icon{
+    background: #e01e14;
+}
+
+#sales_input,
+#expenses_input{
+    width: 100%;
+    outline: none;
+    background: #fff;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border: 0.5px solid #000;
+    cursor: text;
+    text-align: center;
+    font-size: larger;
+}
+#sales_input:focus{
+    border: 2px solid #00661a;
+}
+#expenses_input:focus{
+    border: 2px solid #e01e14;
+}
+#calculate{
+    margin-top: 4rem;
+}
+input[type="button"]{
+    min-width: 40%;
+    min-height: 3rem;
+    font-size: 200%;
+    padding: 0.35rem 0.5rem;
+    text-transform: lowercase;
+    border-radius: 1rem;
+    background: #00661a;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    border: none ;
+}
+
+/**********MEDIA QUERIES**********/
+@media all and (min-width:560px){
+  article.account{
+  display: grid;
+  grid-template-columns:  1fr  1fr;
+  grid-gap :2rem ;
+  justify-content: space-around;
+  }
+  
+  div.account_card{
+    width:19rem;
+    height:auto ;
+  }
+  
+  div.account_sales,
+  div.account_expenses{
+    margin-top :5rem;
+  }
+  
+  input[type="button"]{
+    text-transform: uppercase;
+}
+}
