@@ -235,6 +235,9 @@ input[type="button"]{
 
 /**********MEDIA QUERIES**********/
 @media all and (min-width:560px){
+ .error{
+     height:2rem;
+ }
   article.account{
   display: grid;
   grid-template-columns:  1fr  1fr;

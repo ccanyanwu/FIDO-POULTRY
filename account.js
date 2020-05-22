@@ -46,9 +46,9 @@ const UIprofit = document.querySelector('.profit'),
        
      }
      
-     const clearError = () => {
-       document.querySelector('.error').remove();
-     }
+        const clearError = () => {
+            document.querySelector('.error').remove();
+        }
        
        //validate input
        if(isNaN(salesInput) || isNaN(expensesInput)){
@@ -68,7 +68,7 @@ const UIprofit = document.querySelector('.profit'),
            UIprofit.textContent = `${parseFloat(UIprofit.textContent) + 0}`;
            UIloss.textContent = `${parseFloat(UIloss.textContent) + 0}`;
          }document.querySelector('#loading').classList.add('hide');
-          
+         
        }
        
      };
