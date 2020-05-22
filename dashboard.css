@@ -122,6 +122,10 @@ h2 i{
   display: block ;
   margin: 1.5rem auto ;
 } 
+i img{
+    width:3rem;
+    height:3rem;
+}
 p.dashboard_card_figure{
   text-align: right ;
   font-size :150%;
