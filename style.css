@@ -2,6 +2,8 @@
 
 
 
+
+
 *{
 
   padding: 0;
@@ -12,6 +14,8 @@
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: #00661a ;
+  transition: all 0.5s ease-in;
+  
 }
 .hide{
     display: none;
@@ -19,9 +23,9 @@ body {
 
 .error{
   width:16rem;
-  height: 1rem;
-  background: #f07d7f;
-  color: #000!important ;
+  height: 2rem;
+  background: #eb191c;
+  color: #fff!important ;
   border-radius :0.5rem;
   text-align: center;
   padding: 0.5rem 0;
@@ -104,7 +108,23 @@ label #cancel{
 #check:checked ~ section{
   margin-left: 250px;
 }
+
+/*fifo logo*/
+.fifo{
+  width: 16rem;
+}
+/*nav paragraph*/
+.nav_para{
+  font-size: 130%;
+  margin-top: 0.5rem;
+}
+main{
+    text-align: center ;
+}
+
 header.trial{
+
+
 
   display:flex;
 
@@ -124,6 +144,9 @@ img.logo{
 nav{
   text-align: center ;
 } 
+h1.nav_header{
+    font-size: 240%;
+}
 div.occupy{
 
   width:6rem ;
@@ -133,12 +156,12 @@ div.occupy{
 main{
     text-align: center ;
 }
-
 section{
   min-height: 100%;
   transition: all .5s;
   text-align: center ;
   padding: 2rem;
+  
 }
 article.account{
   display: grid;
@@ -148,13 +171,12 @@ article.account{
   grid-gap :2rem ;
   margin-top:3.2rem ;
 }
-h1._heading{
-  font-size :240%;
-  text-align: center ;
-  min-width: 100%;
-}
+
+
+/*account cards*/
 div.account_card{
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    background:linear-gradient(315deg, #e6e6e6, #fff) ;
+    box-shadow:  -29px -29px 31px #d9d9d9, 29px 29px 31px #ffffff;
     box-sizing: border-box;
     border-radius: 1rem;
     width: 16rem;
@@ -193,6 +215,8 @@ div.account_expenses{
 label{
     font-size: 200%;
 }
+
+/*input group*/
 .account_sales_input-group,
 .account_expenses_input-group{
     display: flex;
@@ -221,6 +245,7 @@ span.account_expenses_icon{
     background: #e01e14;
 }
 
+/*sales and expense input*/
 #sales_input,
 #expenses_input{
     width: 100%;
@@ -232,6 +257,9 @@ span.account_expenses_icon{
     cursor: text;
     text-align: center;
     font-size: larger;
+    transition: all 0.2s ease-in-out;
+    background:linear-gradient(315deg, #e6e6e6, #fff) ;
+    box-shadow:  inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff;
 }
 #sales_input{
     color: #00661a ;
@@ -239,6 +267,7 @@ span.account_expenses_icon{
 #sales_input:focus{
     border: 2px solid #00661a;
     color: #00661a ;
+    box-shadow:  inset 1px 1px 2px #BABECC, inset -1px -1px 2px #fff;
 }
 
 #expenses_input{
@@ -248,6 +277,8 @@ span.account_expenses_icon{
     border: 2px solid #e01e14;
     color: #e01e14;
 }
+
+/*calculate button div*/
 #calculate{
     margin-top: 4rem;
 }
@@ -258,20 +289,38 @@ input[type="button"]{
     padding: 0.35rem 0.5rem;
     text-transform: lowercase;
     border-radius: 1rem;
-    background: #00661a;
-    color: #fff;
+    color: #00661a;
     outline: none;
-    cursor: pointer;
     border: none ;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
-   
+    background-color:#EBECF0;
+    text-shadow: 1px 1px 0 #fff;
+    box-shadow: -5px -5px 20px #BABECC,  5px 5px 20px #fff;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+input[type="button"]:active {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #fff;
 }
 
 /**********MEDIA QUERIES**********/
-@media all and (min-width:560px){
+@media all and (min-width:760px){
  .error{
      height:2rem;
  }
+
+ .fifo{
+  width: 31rem;
+  }
+  
+.nav_para{
+  font-size: 200%;
+  margin-top: 0.5rem;
+  }
   article.account{
   display: grid;
   grid-template-columns:  1fr  1fr;
@@ -293,9 +342,6 @@ input[type="button"]{
     text-transform: uppercase;
 }
  header.trial{
-
-
-
   display:flex;
   flex-direction: row !important;
 

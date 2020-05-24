@@ -2,7 +2,6 @@
 
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,34 +26,35 @@
     <header>MENU</header>
   <ul>
 <li><a href="dashboard.html"><i class="fas fa-qrcode"></i>Dasboard</a></li>
-<li><a href="#"><i class="fas fa-clipboard"></i>Daily Record</a></li>
-<li><a href="index.html"><i class="fas fa-calculator"></i>Accounting</a></li>
+<li><a href="drs.html"><i class="fas fa-clipboard"></i>Daily Record</a></li>
+<li><a href="accounting.html"><i class="fas fa-calculator"></i>Accounting</a></li>
 <li><a href="#"><i class="fas fa-stethoscope"></i>Disease Check</a></li>
-<li><a href="#"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+<li><a href="index.html"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
 </ul>
 </div>
 <!--account CARDS-->
 <main class="main">
-<header class="trial">
+    <header class="trial">
+
+
 
     <div class="occupy">
 
       
     </div>
     <nav class="nav">
-      <h1 class="nav_header">FIDO POULTRY</h1>
-      <p class="nav_para">your plug to healthy protein</p>
+      <img class="fifo" src="FIFO.png" alt="fifo">
+      <p class="nav_para">Administrative site for FIDO poultry</p>
     </nav>
     <img src="chick.png" alt="chick" class="logo">
   </header>
-
 <section class="section">
   
   <marquee behavior="scroll" bgcolor="#fff" loop="-1" width="80%">
    <i>
       <font color="#00661a">
-        Today's date is : 
         <strong>
+        Profit and loss calculation for 
          <span id="time"></span>
         </strong>           
       </font>
@@ -73,14 +73,14 @@
         <label for="sales">Sales/day</label>
         <div class="account_sales_input-group">
             <span class=" account_sales_icon">&#8358;</span>
-            <input type="number" name="sales" id="sales_input" required>
+            <input type="number" name="sales" id="sales_input" required placeholder="0.00">
         </div>
     </div>
     <div class="account_expenses">
         <label for="expenses">Expenses/day</label>
         <div class="account_expenses_input-group">
             <span class=" account_expenses_icon">&#8358;</span>
-            <input type="number" name="expenses" id="expenses_input" required>
+            <input type="number" name="expenses" id="expenses_input" required placeholder="0.00">
         </div>
     </div>
   </article>
