@@ -4,6 +4,7 @@
   margin: 0;
   list-style: none;
   text-decoration: none;
+  box-sizing: border-box ;
 }
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -83,37 +84,49 @@ label #cancel{
 #check:checked ~ section{
   margin-left: 250px;
 }
+
+/*fifo logo*/
+.fifo{
+  width: 14rem;
+  
+}
+/*nav paragraph*/
+.nav_para{
+  font-size: 80%;
+  margin-top: 0.5rem;
+}
 main{
 
     text-align: center ;
 
 }
-section.header{
+header.trial{
+  display:flex;
 
-  background :#00661a ;
-
-  color: #fff!important ;
-  min-width: 100%;
-  height: 10rem;
-  top: 0;
-  display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   justify-content: center ;
   align-items: center ;
-  text-align: center ;
+  background: #00661a ;
+  color:#fff ;
+  padding:1rem 5%;
 }
-img.header_image{
-
-  width: 10rem;
-
-  height: 8rem ;
-  border-radius: 100%;
+img.logo{
+  max-width: 8rem ;
+  max-height: 5rem;
+  border-radius :50%;
   margin-top: 1rem ;
-  
 }
-div.header_content{
+nav{
   text-align: center ;
-  margin: 1rem 0;
+} 
+h1.nav_header{
+    font-size: 240%;
+}
+div.occupy{
+
+  width:6rem ;
+
+  display: none;
 }
 
 section{
@@ -131,24 +144,27 @@ article.dashboard{
   grid-gap :2rem ;
   margin-top:3.2rem ;
 }
-h1.dashboard_heading{
-  font-size :240%;
-  text-align: center ;
-  min-width: 100%;
-}
 div.dashboard_card{
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    background:linear-gradient(315deg, #e6e6e6, #fff) ;
+    box-shadow:  -29px -29px 31px #d9d9d9, 29px 29px 31px #ffffff;
     box-sizing: border-box;
     width: 16rem;
-    height :16rem;
+    height :10rem ;
     display: grid;
     grid-template-rows: 10fr 2fr;
     padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 1s ease-out;
 } 
+div.dashboard_card:hover{
+    width:18rem;
+    height:12rem;
+    transition: all 1s ease-in;
+}
 
 h2.dashboard_card_header{
   text-align: left;
-  font-size :190%;
+  font-size :120%;
   font-weight :300;
   border-bottom:1px solid #c4c4c4;
 }
@@ -158,7 +174,7 @@ h2 i{
 } 
 i img{
     width:3rem;
-    height:3rem;
+    height:1rem;
 }
 p.dashboard_card_figure{
   text-align: right ;
@@ -183,7 +199,7 @@ p.drugs{
 
 
 /**********MEDIA QUERIES**********/
-@media all and (min-width:560px){
+@media all and (min-width:760px){
   article.dashboard{
   display: grid;
   grid-template-columns:  1fr  1fr;
@@ -191,38 +207,47 @@ p.drugs{
   justify-content: space-around;
   }
   
+  .fifo{
+    width: 31rem;
+    }
+    
+  .nav_para{
+    font-size: 200%;
+    margin-top: 0.5rem;
+    }
   div.dashboard_card{
     width:19rem;
     height:auto ;
   }
+  div.dashboard_card:hover{
+    width:21rem;
+    height:auto;
+    transition: all 1s;
+}
   h2 i{
     margin: 3rem auto;
     font-size: 200%;
   } 
-  section.header{
+  header.trial{
+  display:flex;
+  flex-direction: row !important;
 
-
-
-
-
-  background :#00661a ;
-
-  color: #fff;
-  min-width: 100%;
-  height: 3rem ;
-  top: 0;
-  display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-between ;
   align-items: center ;
-  justify-content: center ;
-  
-  }
-  img.header_image{
-    margin-left : auto ;
-    height: auto ;
-    margin-top: 0;
-  } 
- .header_heading, .header_description{
-   margin-left: 400px;
- } 
+  background: #00661a ;
+  color:#fff ;
+  padding:1rem 5%;
+}
+img.logo{
+  max-width: 10rem ;
+  max-height: 7rem;
+  border-radius :50%;
+  margin-top: 0;
+}
+div.occupy{
+
+  width:6rem ;
+
+  display: block ;
+}
 }

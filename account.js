@@ -60,10 +60,13 @@ const UIprofit = document.querySelector('.profit'),
            let difference = salesInput - expensesInput;
            addition += difference;
            UIprofit.textContent = `${(parseFloat(UIprofit.textContent) + addition).toFixed(2)}`;
+           localStorage.setItem('profit', `${JSON.stringify(UIprofit.textContent)}`)
          }else if(expensesInput > salesInput){
            let difference = expensesInput - salesInput;
            subtraction += difference;
            UIloss.textContent = `${(parseFloat(UIloss.textContent) + subtraction).toFixed(2)}`;
+           localStorage.setItem('loss', `${JSON.stringify(UIloss.textContent)}`);
+        
          }else if (salesInput === expensesInput){
            UIprofit.textContent = `${parseFloat(UIprofit.textContent) + 0}`;
            UIloss.textContent = `${parseFloat(UIloss.textContent) + 0}`;
