@@ -1,21 +1,23 @@
-/*basic css reset */
+/*basic css reset rules */
 *{
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
-  box-sizing: border-box ;
+  box-sizing: border-box;
 }
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  padding: 0;
+  background-color: #fff;
+  color: #02507F ;
+  transition: all 0.5s ease-in;
 }
 
 /*hides alert display*/
 .hide{
   display: none!important ;
 }
-/***********SIDEBAR**********/
+/**********sidebar**********/
 .sidebar {
   position: fixed;
   left: -250px;
@@ -27,7 +29,7 @@ body {
 }
 .sidebar header {
   font-size: 22px;
-  color: white ;
+  color: white!important ;
   line-height: 70px;
   padding-left: 40px;
   background: #02507e;
@@ -51,6 +53,7 @@ ul li:hover a:hover{
   background: #fff !important ;
   color:#02507F  !important  ;
 }
+
 .active{
     background: #fff;
     color:#02507F  !important  ;
@@ -64,7 +67,7 @@ ul li:hover a:hover{
 }
 label #btn,label #cancel{
   position: absolute;
-  background: #02507F ;
+  background: #02507F;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -75,6 +78,7 @@ label #btn{
   color: white!important ;
   padding: 6px 12px;
   transition: all .5s;
+  z-index: 500;
 }
 label #cancel{
   z-index: 1111;
@@ -109,10 +113,12 @@ label #cancel{
   font-size: 80%;
   margin-top: 0.5rem;
 }
+/*main section */
 main{
     text-align: center ;
+    
 }
-/*header */
+/*header*/
 header.trial{
   display:flex;
   flex-direction: column;
@@ -122,6 +128,7 @@ header.trial{
   color:#fff ;
   padding:1rem 5%;
 }
+/*chicken image */
 img.logo{
   max-width: 8rem ;
   max-height: 5rem;
@@ -131,88 +138,57 @@ img.logo{
 nav{
   text-align: center ;
 } 
-h1.nav_header{
-    font-size: 240%;
-}
 div.occupy{
   width:6rem ;
   display: none;
 }
 
+marquee{
+    margin :1rem ;
+}
 section{
   min-height: 100%;
   transition: all .5s;
   text-align: center ;
-  paddng: auto;
-  color:#02507F !important ;
+  padding: auto;
 }
-/**********dashboard cards section **********/
-article.dashboard{
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center ;
-  align-content: center ;
-  grid-gap :2rem ;
-  margin-top:3.2rem ;
-  padding-bottom: 2rem;
-}
-div.dashboard_card{
+/*about section*/
+div.about,
+div.project{
+  width: 95%;
+  margin: 0 auto ;
+  height: auto ;
   background:linear-gradient(315deg, #e6e6e6, #fff) ;
   box-shadow:  0px 29px 31px #d9d9d9, 0px 29px 31px #ffffff;
- box-sizing: border-box;
-  width: 17rem;
-  height :12rem ;
-  display: grid;
-  grid-template-rows: 10fr 2fr;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  transition: all 0.2s ;
-  margin: 0  ;
-} 
-div.dashboard_card:hover{
-  width:18rem;
-  height:12rem;
-  transition: all 0.2s ;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  margin :2rem auto ;
+  padding: 2rem ;
+  line-height: 1.5 ;  
 }
 
-h2.dashboard_card_header{
+div.project{
+  margin-top :2rem ;
+}
+p.about_header{
+  font-size: 200%;
+  font-weight: 300;
   text-align: left;
-  font-size :120%;
-  font-weight :300;
-  border-bottom:1px solid #c4c4c4;
+  margin-bottom: rem ;
+  border-bottom: 0.5px solid #02507F ;
 }
-h2 i{
-  display: block ;
-  margin: 1.5rem auto ;
-} 
-
-i img{
-    width:3rem;
-    height:1rem;
+p.about_para,
+p.project_para{
+  text-align: justify ;
+  font-weight: 300;
+  padding-top: 1rem ;
 }
-p.dashboard_card_figure{
-  text-align: right ;
-  font-size :150%;
-}
-  p.bird_count,
-  p.water_count{
-  color: #147ae0;
-} 
-  p.mortality_rate,
-  p.expenditure,
-  p.loss,
-  p.vaccination{
-  color: #e01e14;
-}
-  p.feeds{
-      color:#238510; 
-  }
-  p.sales,
-  p.profit{
-    color: #02507F ;
-}
-p.drugs{
-  color: #e3d912;
+h3.project_title{
+  font-size: 150%;
+  text-align: left;
+  margin-bottom:1.5rem ;
+  font-weight: 300 ;
+  text-decoration: underline;
 }
 
 /**********log out alert **********/
@@ -238,11 +214,9 @@ div.modal{
   z-index: 40060;
 }
 div.sub{
-    display :flex ;
-    background:rgba(0, 0, 0, 0.5);
-    backgrond: #fff;
+  display :flex ;
+  background:rgba(0, 0, 0, 0.5);
   width:100% ;
-
   margin: 0 auto ;
   flex-direction: column;
   justify-content: center ;
@@ -254,16 +228,16 @@ div.sub{
   padding: 1rem ;
 }
 div.sbb{
-    display: flex ;
-    background :white ;
-    flex-direction :column ;
-    justify-content :center ;
-    align-items: center ;
-    padding: 2rem ;
-    max-height: 100%;
-    margin: 0 auto ;
-    background:linear-gradient(315deg, #e6e6e6, #fff) ;
-    border-radius:0.5rem ;
+  display: flex ;
+  background :white ;
+  flex-direction :column ;
+  justify-content :center ;
+  align-items: center ;
+  padding: 2rem ;
+  max-height: 100%;
+  margin: 0 auto ;
+  background:linear-gradient(315deg, #e6e6e6, #fff) ;
+  border-radius:0.5rem ;
   box-shadow:  0px 29px 31px #333, 0px 29px 31px #333;
 
  
@@ -291,136 +265,77 @@ div.modal input{
     text-transform:capitalize;
     font-size: 110%;
     border-radius :1.8rem;
+    height: 2rem !important;
 }
 
 input#yes{
     margin-top: 3rem ;
 } 
+
 /**********MEDIA QUERIES**********/
+@media all and (min-width:790px){
+ .error{
+   height:2rem;
+ }
 
-@media all and (min-width:768px) {
-  marquee{
-    margin: 2rem 0;
+.fifo{
+  width: 20rem;
+  margin-top: 0;
   }
-  article.dashboard{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-gap :2rem ;
-    max-width: 80%;
-    justify-content: space-evenly;
-    margin: 0 auto ;
-  }
-
-  .fifo{
-      width: 20rem;
-      
-    }
   
-  .nav_para{
-      font-size: 80%;
-      margin-top: 0.3rem;
-    }
-  div.dashboard_card{
-    width:17rem;
-    height:14rem ;
-    border: 1px solid #02507F ;
-    opacity :0.9;
+.nav_para{
+  font-size: 80%;
+  margin-top: 0.3rem;
   }
-  div.dashboard_card:hover{
-    width:19rem;
-    height:16rem;
-    transition: all 1s;
-  }
-  h2 i{
-    margin: 3rem auto;
-    font-size: 200%;
-  } 
-  header.trial{
+  
+ header.trial{
   display:flex;
   flex-direction: row !important;
   justify-content: space-between ;
   align-items: center ;
   color:#fff ;
   padding:0.5rem 5%;
-  }
-  img.logo{
-    max-width: 6rem ;
-    max-height: 3rem;
-    border-radius :50%;
-    margin-top: 0;
-  }
-  div.occupy{
-    width:6rem ;
-    display: block ;
-  }
-  h1.modal_header{
-    font-size: 200%;
-  }
-  p.modal_question{
-    font-size: 90%;
-  }
-  div.modal input{
-    height: 2rem;
-  }
 }
-
-@media all and (min-width:992px) {
-  marquee{
-    margin: 2rem 0;
-  }
-  article.dashboard{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap :2rem ;
-    max-width: 80%;
-    justify-content: space-evenly;
-    margin: 0 auto ;
-    padding-bottom: 2rem;
-  }
-
-  .fifo{
-      width: 20rem;
-      
-    }
-  
-  .nav_para{
-      font-size: 80%;
-      margin-top: 0.3rem;
-    }
-  div.dashboard_card{
-    width:17rem;
-    height:14rem ;
-    border: 1px solid #02507F ;
-    opacity :0.9;
-  }
-  div.dashboard_card:hover{
-    width:19rem;
-    height:16rem;
-    transition: all 1s;
-  }
-  h2 i{
-    margin: 3rem auto;
-    font-size: 200%;
-  } 
-  header.trial{
-  display:flex;
-  flex-direction: row !important;
-  justify-content: space-between ;
-  align-items: center ;
-  color:#fff ;
-  padding:0.5rem 5%;
-  }
-  img.logo{
-    max-width: 6rem ;
-    max-height: 3rem;
-    border-radius :50%;
-    margin-top: 0;
-  }
-  div.occupy{
-    width:6rem ;
-    display: block ;
-  }
+img.logo{
+  max-width: 6rem ;
+  max-height: 3rem;
+  border-radius :50%;
+  margin-top: 0;
 }
+div.occupy{
+  width:6rem ;
+  display: block ;
+  }
+    
+  p.about_header{
 
-
-
+    font-size: 300%;
+    font-weight: 300;
+    text-align: left;
+    
+    border-bottom: 0.5px solid #02507F ;
+  }
+h3.project_title{
+    font-size: 300%;
+    text-align: left;
+    margin-bottom:.5rem ;
+    font-weight: 300 ;
+    border-bottom : 0.5px solid #02507F ;
+    text-decoration: none ;
+    }
+    div.project{
+        margin-top :4rem ;
+    }
+    p.project_para{
+      line-height: 1.5;
+    }
+h1.modal_header{
+  font-size: 200%;
+}
+p.modal_question{
+  font-size: 90%;
+}
+div.modal input{
+  height: 2rem;
+}
+}

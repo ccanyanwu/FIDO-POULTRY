@@ -1,101 +1,58 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     
-    <meta name="description"
-        content="The FIDO poultry management system helps farmers manage their farms effectively with high accountability for every bird, feed, water, expenditure, profit, loss and more">   
-    <meta name="keywords" content="poultry, agriculture, management, chicks.accounts" />
-    <meta property="og:title" content="FIDO POULTRY" />
-    
-    <title>FIDO POULTRY/ACCOUNTS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  </head>
-  <body>
-    <input type="checkbox" id="check">
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-    <header>MENU</header>
-  <ul>
-<li><a href="dashboard.html"><i class="fas fa-qrcode"></i>Dasboard</a></li>
-<li><a href="drs.html"><i class="fas fa-clipboard"></i>Daily Record</a></li>
-<li><a href="accounting.html"><i class="fas fa-calculator"></i>Accounting</a></li>
-<li><a href="#"><i class="fas fa-stethoscope"></i>Disease Check</a></li>
-<li><a href="index.html"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
-</ul>
-</div>
-<!--account CARDS-->
-<main class="main">
-    <header class="trial">
+    <title>Sign In</title>
+</head>
 
-
-
-    <div class="occupy">
-
-      
-    </div>
-    <nav class="nav">
-      <img class="fifo" src="FIFO.png" alt="fifo">
-      <p class="nav_para">Administrative site for FIDO poultry</p>
-    </nav>
-    <img src="chick.png" alt="chick" class="logo">
-  </header>
-<section class="section">
-  
-  <marquee behavior="scroll" bgcolor="#fff" loop="-1" width="80%">
-   <i>
-      <font color="#00661a">
-        <strong>
-        Profit and loss calculation for 
-         <span id="time"></span>
-        </strong>           
-      </font>
-   </i>
-</marquee>
-  <article class="account">
-    <div class="account_card">
-        <h2 class="account_card_header">Profit (&#8358;) <br /></h2>
-        <p class="account_card_figure profit">0</p>
-    </div>
-    <div class="account_card">
-        <h2 class="account_card_header">Loss (&#8358;) <br /></h2>
-        <p class="account_card_figure loss">0</p>
-    </div>
-    <div class="account_sales">
-        <label for="sales">Sales/day</label>
-        <div class="account_sales_input-group">
-            <span class=" account_sales_icon">&#8358;</span>
-            <input type="number" name="sales" id="sales_input" required placeholder="0.00">
+<body>
+    
+    <div class="container-fluid ">
+        <div class="bod mt-5 mx-auto">
+            <div class="text-center para">
+                <h5>Welcome to Fido Poultry Management System App </h5>
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+            <form action="dashboard.html" method="GET">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control user-email" id="email" name="email" aria-describedby="emailHelp" required>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control user-password" id="exampleInputPassword1" required minlength="6" maxlength="10">
+                </div>
+                <div class="text-center">
+                    <p class="hide" style="color: red;"><i class="fas fa-exclamation"></i> email or password incorrect</p>
+                    <button type="submit" class="btn">Sign In</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="account_expenses">
-        <label for="expenses">Expenses/day</label>
-        <div class="account_expenses_input-group">
-            <span class=" account_expenses_icon">&#8358;</span>
-            <input type="number" name="expenses" id="expenses_input" required placeholder="0.00">
-        </div>
-    </div>
-  </article>
-  <!--loader-->
-    <div id="loading" class="hide">
-        <img src="loading.gif" alt="">
-    </div>
-  <!--clculate-->
-  <div id="calculate" >
-    <input type="button" value="calculate" class="calculate-btn">
-  </div>
-</section>
-</main>
-<h1>perfect</h1>
-<script src="account.js"></script>
-  </body>
+
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        
+        
+        
+</body>
+
 </html>
- 
